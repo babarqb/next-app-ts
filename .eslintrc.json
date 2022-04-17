@@ -1,3 +1,30 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
+  "globals": {
+    "react": "readonly"
+  },
+  "rules": {
+    "no-unused-vars": [
+      1,
+      {
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ]
+    //    "react/jsx-filename-extension": [
+    //      1,
+    //      {
+    //        "extensions": [
+    //          ".js",
+    //          ".jsx"
+    //        ]
+    //      }
+    //    ],
+    //    "react/prop-types": 0,
+    //    "react/react-in-jsx-scope": 0,
+    //    "react/jsx-props-no-spreading": 0,
+    //    "react/no-unescaped-entities": 0,
+    //    "react/jsx-one-expression-per-line": 0,
+    //    "react/jsx-wrap-multilines": 0
+  }
 }
