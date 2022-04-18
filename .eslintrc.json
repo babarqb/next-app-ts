@@ -1,8 +1,24 @@
 {
-  "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
+  "extends": [
+    "plugin:storybook/recommended",
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended"
+  ],
   "globals": {
-    "react": "readonly"
+    "React": "readonly"
   },
+  "overrides": [
+    {
+      "files": [
+        "*.stories.@(ts|tsx|js|jsx|mjs|cjs)"
+      ],
+      "rules": {
+        // example of overriding a rule
+        "storybook/hierarchy-separator": "error"
+      }
+    }
+  ],
   "rules": {
     "no-unused-vars": [
       1,
@@ -11,20 +27,5 @@
         "argsIgnorePattern": "^_"
       }
     ]
-    //    "react/jsx-filename-extension": [
-    //      1,
-    //      {
-    //        "extensions": [
-    //          ".js",
-    //          ".jsx"
-    //        ]
-    //      }
-    //    ],
-    //    "react/prop-types": 0,
-    //    "react/react-in-jsx-scope": 0,
-    //    "react/jsx-props-no-spreading": 0,
-    //    "react/no-unescaped-entities": 0,
-    //    "react/jsx-one-expression-per-line": 0,
-    //    "react/jsx-wrap-multilines": 0
   }
 }
